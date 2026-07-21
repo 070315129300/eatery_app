@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Itern Eatery | Discover Your Next Favorite Meal</title>
+    <meta name="description"
+        content="Itern Eatery brings together amazing local restaurants, fast delivery, and personalized food discovery in one simple platform." />
+    <style>
+        :root {
+            --bg: #fffaf5;
+            --text: #261b15;
+            --muted: #6f5b4a;
+            --primary: #ff7a1a;
+            --primary-dark: #d95f00;
+            --card: #ffffff;
+            --border: #f1dfce;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: linear-gradient(135deg, #fffaf5 0%, #ffe8d6 100%);
+            line-height: 1.6;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 32px;
+            align-items: center;
+            padding: 36px 0 24px;
+        }
+
+        .hero-copy h1 {
+            font-size: clamp(2.2rem, 4vw, 3.6rem);
+            margin: 0 0 14px;
+            line-height: 1.1;
+        }
+
+        .hero-copy p {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin: 0 0 24px;
+            max-width: 620px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 10px 20px rgba(255, 122, 26, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 20px 45px rgba(38, 27, 21, 0.08);
+        }
+
+        .hero-card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 16px 0 20px;
+        }
+
+        .pill {
+            background: #fff2e6;
+            color: #9b4300;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .stat {
+            background: #fff8f1;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.15rem;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .feature {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 20px;
+        }
+
+        .feature h4 {
+            margin: 6px 0 8px;
+        }
+
+        .feature p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        footer {
+            margin-top: 36px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 860px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .page {
+                padding: 16px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <section class="hero">
+                <div class="hero-copy">
+                    <h1>Discover delicious food, effortlessly.</h1>
+                    <p>
+                        Itern Eatery is a modern food discovery platform that helps hungry people
+                        find the best local spots, order with ease, and enjoy a smooth dining experience.
+                    </p>
+                    <div class="actions">
+                        <a class="btn btn-primary" href="#explore">Explore Nearby Eats</a>
+                        <a class="btn btn-secondary" href="#features">Why Choose Us</a>
+                    </div>
+                </div>
+
+                <div class="hero-card" aria-label="Platform highlights">
+                    <h3>Fresh picks every day</h3>
+                    <p>From cozy cafés to trendy restaurants, discover meals that match your mood and cravings.</p>
+                    <div class="pill-list">
+                        <span class="pill">Fast delivery</span>
+                        <span class="pill">Local favorites</span>
+                        <span class="pill">Curated menus</span>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <strong>500+</strong>
+                            <span>Restaurants</span>
+                        </div>
+                        <div class="stat">
+                            <strong>24/7</strong>
+                            <span>Ordering</span>
+                        </div>
+                        <div class="stat">
+                            <strong>4.9★</strong>
+                            <span>User rating</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="features">
+                <div class="features">
+                    <article class="feature">
+                        <h4>Personalized Discovery</h4>
+                        <p>Get meal recommendations based on your preferences, location, and favorite cuisines.</p>
+                    </article>
+                    <article class="feature">
+                        <h4>Simple Ordering</h4>
+                        <p>Browse menus, place orders, and track delivery in one streamlined experience.</p>
+                    </article>
+                    <article class="feature">
+                        <h4>Trusted Reviews</h4>
+                        <p>Read community feedback and discover standout dishes from nearby eateries.</p>
+                    </article>
+                </div>
+            </section>
+
+            <footer>
+                <p>Itern Eatery — bringing people and great food closer together.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
