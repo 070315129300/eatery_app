@@ -1,14 +1,457 @@
-nav{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    padding: 50px;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    width: 90%;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 38px;
+    color: #333;
+    margin-bottom: 55px;
+    width: 45%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.hero-content button {
+    width: 280px;
+    height: 65px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: #F42424;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-content button:hover {
+    background: #d81919;
+}
+
+.left-top {
+    position: absolute;
+    left: 70px;
+    top: 100px;
+    width: 250px;
+    animation: slideLeft 1.3s ease forwards;
+}
+
+.left-bottom {
+    position: absolute;
+    left: 250px;
+    bottom: 30px;
+    width: 350px;
+    animation: slideLeft 1.6s ease forwards;
+}
+
+.right-top {
+    position: absolute;
+    right: 40px;
+    top: 60px;
+    width: 350px;
+    animation: slideRight 1.4s ease forwards;
+}
+
+.right-bottom {
+    position: absolute;
+    right: 250px;
+    bottom: 30px;
+    width: 250px;
+    animation: slideRight 1.6s ease forwards;
+}
+
+/* Animations */
+
+@keyframes slideLeft {
+
+    from {
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 
 }
-nav ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+
+@keyframes slideRight {
+
+    from {
+        transform: translateX(250px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 
 }
-a{
-    text-decoration: none;
+
+.journey {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 80px auto;
+}
+
+.journey-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.journey-text,
+.journey-img {
+    flex: 1;
+}
+
+.journey-text h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.journey-text p {
+    font-size: 16px;
+    line-height: 2;
+    padding-bottom: 10px;
+    color: #333;
+}
+
+.missions {
+    width: 100%;
+    max-width: 1300px;
+    /* margin: 80px auto; */
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.mission {
+    flex: 1;
+    min-width: 320px;
+    background: #FFF4F4;
+    border-radius: 30px;
+    padding: 40px 35px 40px;
+}
+
+.mission i {
+    width: 130px;
+    height: 130px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EF2B2D;
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+.mission h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 25px;
+}
+
+.mission p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.people {
+    text-align: center;
+    margin: 80px auto;
+}
+
+.people h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.people p {
+    color: #333;
+    font-size: 21px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    width: 70%;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.people img {
+    cursor: pointer;
+}
+
+@media (max-width: 1240px) {
+    .left-top {
+        left: 10px;
+        top: 100px;
+        width: 200px;
+    }
+
+    .left-bottom {
+        left: 130px;
+        bottom: 50px;
+        width: 240px;
+    }
+
+    .right-top {
+        right: 30px;
+        top: 70px;
+        width: 200px;
+    }
+
+    .right-bottom {
+        right: 90px;
+        bottom: 30px;
+        width: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+        width: 55%;
+    }
+
+    .hero-content button {
+        width: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .hero {
+        min-height: 85vh;
+        padding: 100px 40px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+        line-height: 58px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+        line-height: 32px;
+        margin-bottom: 40px;
+        width: 90%;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .hero-content button {
+        width: 260px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .journey {
+        flex-direction: column;
+    }
+
+    .journey-img img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .missions {
+        gap: 30px;
+    }
+
+    .mission {
+        padding: 35px 30px;
+    }
+
+    .mission i {
+        width: 110px;
+        height: 110px;
+        font-size: 50px;
+    }
+
+    .mission h3 {
+        font-size: 1.8rem;
+    }
+
+    .mission p {
+        font-size: 1.15rem;
+    }
+
+    .people img {
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+    }
+
+    .people p {
+        font-size: 15px;
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+
+    .hero {
+        padding: 90px 25px;
+        min-height: 80vh;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 35px;
+    }
+
+    .hero-content button {
+        width: 230px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .journey {
+        flex-direction: column;
+    }
+
+    .journey-img img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .missions {
+        flex-direction: column;
+    }
+
+    .mission {
+        width: 100%;
+    }
+}
+
+@media (max-width:576px) {
+
+    .hero {
+        padding: 80px 20px;
+        min-height: 70vh;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+
+    .hero-content button {
+        width: 200px;
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .journey {
+        flex-direction: column;
+    }
+
+    .journey-img img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .mission {
+        padding: 30px 25px;
+    }
+
+    .mission i {
+        width: 90px;
+        height: 90px;
+        font-size: 40px;
+    }
+
+    .mission h3 {
+        font-size: 1.5rem;
+    }
+
+    .mission p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .people p {
+        font-size: 16px;
+        width: 100%;
+    }
+
 }
