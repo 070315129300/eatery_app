@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora dining Reservation Page</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    
+   <section class="hero-section">
+        <div class="hero-side">
+            <span class="reservation">Reservations</span>
+            
+             <h1>Save a seat<br>at <em>our</em> table.</h1>
+             <p>Whether it's a Sunday family lunch or a first jollof date, we'll have a spot warm and ready for you. Tell us when, and we'll handle the rest.</p>
+            <div class="hero-stats">
+                <div><strong>10+</strong><span>Years of home cooking</span></div>
+                <div><strong>5+</strong><span>Locations nationwide</span></div>
+                <div><strong>5 min</strong><span>To confirm your booking</span></div>
+            </div>
+        </div>
+
+        <form class="form-card" action="#" method="post">
+            <h2>Book your table</h2>
+            <p>Fill in your details a confirmation will be sent by sms and email</p>
+
+            <div class="field">
+                <label for="name">Full name</label>
+                <input type="text" name="name" placeholder="e.g. David Adeboye" required></div>
+            </div>  
+            <div class="field-row">
+                <div class="field">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" name="phone" placeholder="080X XXX XXXX" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="you@email.com">
+                </div>
+            </div>
+
+
+            <div class="field-row">
+                <div class="field">
+                    <label for="date">Date</label>
+                    <input type="date"  name="date" required>
+                </div>
+                <div class="field">
+                    <label for="time">Time</label>
+                    <input type="time" name="time" required>
+                </div>
+            </div>
+            <div class="field">
+                <label for="guests">Party size</label>
+                <input type="number" id="guests" name="guests" min="1" max="20" value="2" required>
+            </div>
+
+            <div class="field">
+                <label for="requests">Special requests <span style="font-weight:400;color:#B7ACAB;">(optional)</span></label>
+                <input type="text" id="requests" name="requests" placeholder="Birthday, proposal, window seat…">
+            </div>
+            <button type="submit" class="submit-btn">Confirm reservation →</button>
+            <p class="form-note">We'll text you to confirm within 15 minutes during opening hours.</p>
+
+        </form>
+   </section> 
+
+    <section class="experience">
+            <span class="reservation experience-tag">Ready to make memories</span>
+            <h2 class="experience-heading">Every table tells a story</h2>
+        <div class="experience-cards">
+            <div class="ex-card">
+                
+                <h3>Pick your spot</h3>
+                <p>Window seat, patio breeze, or a quiet booth — let us know what you're in the mood for.</p>
+            </div>
+            <div class="ex-card">
+                <h3>Celebrating something?</h3>
+                <p>Birthdays, proposals, promotions — tell us and we'll add a little something extra.</p>
+            </div>
+            <div class="ex-card">
+                <h3>Big or small parties</h3>
+                <p>From a table for two to a family gathering of twenty, we'll set it up right.</p>
+            </div>
+            <div class="ex-card">
+                <h3>Home-cooked, always</h3>
+                <p>Every dish is made fresh the way it's meant to be — sweet, spiced, and shared.</p>
+            </div>
+        </div>
+   </section>
+</body>
+
+ 
